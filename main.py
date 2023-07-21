@@ -24,8 +24,8 @@ parser = argparse.ArgumentParser(description='Generate rooflines from orthophoto
 parser.add_argument('--ROOT_PATH', default='/media/geo3d/data/rooflines_data/data')
 parser.add_argument('--tif_with_tfw', default=False, type=bool,
                     help='True for with tfw; False without tfw.')
-parser.add_argument('--layer_name', default='pand', help='Used layer name in the gis data.') #lod22_2d
-parser.add_argument('--building_id', default='fid', help='Used field id for representing individual buildings in the gis data.')
+parser.add_argument('--layer_name', default='reconstruction_input', help='Used layer name in the gis data.') #lod22_2d
+parser.add_argument('--building_id', default='identificatie', help='Used field id for representing individual buildings in the gis data.')
 parser.add_argument('--write_building_image', default=True, type=bool,
                     help='Write cropped building image.')
 parser.add_argument('--write_building_image_with_rooflines', default=True, type=bool,
@@ -54,7 +54,7 @@ parser.add_argument('--pixel_offset', default=100, type=int,
 parser.add_argument('--building_buffer_dis', default=1.0, type=float,
                     help='The minimum distance (> 0) between adjacent buildings for merging.')
 parser.add_argument('--show_progress', default=True, type=bool, help='Show progress bar.')
-parser.add_argument('--parallel_processing', default=True, type=bool,
+parser.add_argument('--parallel_processing', default=False, type=bool,
                     help='Allows for parallel processing.')
 parser.add_argument('--num_cpu_cores_to_use', default=10, type=int, help='Number of CPU cores to use.')
 parser.add_argument('--parallel_verbose', default=1, type=int, help='Controls the level of progress reporting.')

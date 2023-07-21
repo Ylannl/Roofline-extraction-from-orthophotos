@@ -302,8 +302,8 @@ class WPolygons():
             id += 1
         self.orig_building_polygon_dict = copy.deepcopy(self.building_polygon_dict)
 
-    def process_gt_rooflines(self, building_id):
-        layer = self.file.GetLayerByName("lod22_2d")
+    def process_gt_rooflines(self, building_id, layer_name):
+        layer = self.file.GetLayerByName(layer_name)
         id = 0
         for shape in layer:
             b_id = shape.GetField(building_id)
@@ -334,7 +334,7 @@ class WPolygons():
         else:
             self.process_raw_shapes(args.building_id, args.layer_name)
         if args.write_gt_building_image_with_rooflines:
-            self.process_gt_rooflines(args.building_id)
+            self.process_gt_rooflines(args.building_id, args.layer_name)
         del self.shapes
 class OrthoPhoto():
     def __init__(self):

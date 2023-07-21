@@ -47,13 +47,13 @@ If you use it in a scientific work, we kindly ask you to cite it:
 
 *1.* Install all required Python packages as follows
 ```
-pip install numpy shapely rtree tqdm joblib GDAL
+pip install numpy shapely rtree tqdm joblib GDAL[numpy]
 ```
 The code was tested on numpy 1.24.2, shapely 2.0.1, rtree 1.0.1, tqdm 4.65.0, joblib 1.2.0, GDAL 3.6.2. 
 
 *2.* Install GCC, Boost (1.63.0 or newer), Eigen3, CGAL, and OpenCV in Conda:
 ```
-conda install -c conda-forge gcc=12.1.0; conda install -c anaconda boost; conda install -c omnia eigen3; conda install eigen; conda install -c conda-forge cgal; conda install -c conda-forge opencv
+conda install -c conda-forge gcc=12.1.0; conda install -c conda-forge boost; conda install -c omnia eigen3; conda install eigen; conda install -c conda-forge cgal; conda install -c conda-forge opencv
 ```
 The code was tested on Eigen 3.3.7, CGAL 5.5.2, OpenCV 4.7.0.
 
