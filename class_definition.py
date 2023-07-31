@@ -168,7 +168,8 @@ class WPolygons():
             poly = WPolygon(id, b_id)
             building_geo = shape.GetGeometryRef()
             if building_geo.GetGeometryType() == ogr.wkbPolygon or \
-                    building_geo.GetGeometryName() == "MULTIPOLYGON":
+                    building_geo.GetGeometryName() == "MULTIPOLYGON" or \
+                    building_geo.GetGeometryName() == "POLYGON":
                 ring = building_geo.GetGeometryRef(0)
                 num_points = ring.GetPointCount()
                 poly.geo_points = np.empty((num_points, 2), dtype=np.float64)
