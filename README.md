@@ -47,7 +47,7 @@ If you use it in a scientific work, we kindly ask you to cite it:
 
 *1.* Install all required Python packages as follows
 ```
-pip install numpy shapely rtree tqdm joblib GDAL[numpy]
+pip install wheel numpy shapely rtree tqdm joblib GDAL[numpy]
 ```
 The code was tested on numpy 1.24.2, shapely 2.0.1, rtree 1.0.1, tqdm 4.65.0, joblib 1.2.0, GDAL 3.6.2. 
 

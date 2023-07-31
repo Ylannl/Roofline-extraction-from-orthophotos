@@ -25,6 +25,7 @@ parser.add_argument('--ROOT_PATH', default='/media/geo3d/data/rooflines_data/dat
 parser.add_argument('--tif_with_tfw', default=False, type=bool,
                     help='True for with tfw; False without tfw.')
 parser.add_argument('--layer_name', default='reconstruction_input', help='Used layer name in the gis data.') #lod22_2d
+parser.add_argument('--layer_filter', default="", help="Filter layer features by this condition, eg: source_pc='DIM'") #lod22_2d
 parser.add_argument('--building_id', default='identificatie', help='Used field id for representing individual buildings in the gis data.')
 parser.add_argument('--write_building_image', default=True, type=bool,
                     help='Write cropped building image.')
