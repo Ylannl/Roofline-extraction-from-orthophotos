@@ -330,7 +330,7 @@ class WPolygons():
         self.shapes = self.file.GetLayerByName(args.layer_name)
         self.srs = self.shapes.GetSpatialRef()
         if args.layer_filter:
-            shapes.SetAttributeFilter(args.layer_filter)
+            self.shapes.SetAttributeFilter(args.layer_filter)
         if args.merge_connected_building_polygons:
             self.process_to_merge_adjacent_polygons(args.building_id, args.layer_name, args.building_buffer_dis)
         else:
