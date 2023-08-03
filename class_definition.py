@@ -268,7 +268,8 @@ class WPolygons():
             poly = WPolygon(id, b_id)
             building_geo = shape.GetGeometryRef()
             if building_geo.GetGeometryType() == ogr.wkbPolygon or \
-                    building_geo.GetGeometryName() == "MULTIPOLYGON":
+                    building_geo.GetGeometryName() == "MULTIPOLYGON" or \
+                    building_geo.GetGeometryName() == "POLYGON":
                 xmin, xmax, ymin, ymax = building_geo.GetEnvelope()
                 poly.bbox_coord = [xmin, ymin, xmax, ymax]  # (lower left, upper right)
                 ring = building_geo.GetGeometryRef(0)
@@ -311,7 +312,8 @@ class WPolygons():
             poly = WPolygon(id, b_id)
             building_geo = shape.GetGeometryRef()
             if building_geo.GetGeometryType() == ogr.wkbPolygon or \
-                    building_geo.GetGeometryName() == "MULTIPOLYGON":
+                    building_geo.GetGeometryName() == "MULTIPOLYGON" or \
+                    building_geo.GetGeometryName() == "POLYGON":
                 xmin, xmax, ymin, ymax = building_geo.GetEnvelope()
                 poly.bbox_coord = [xmin, ymin, xmax, ymax]  # (lower left, upper right)
                 ring = building_geo.GetGeometryRef(0)
