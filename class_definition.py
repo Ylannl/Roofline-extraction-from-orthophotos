@@ -5,6 +5,7 @@ os.environ.setdefault('OPENCV_IO_MAX_IMAGE_PIXELS', pow(2,50).__str__())
 import cv2
 
 from osgeo import gdal
+gdal.DontUseExceptions()
 from osgeo import ogr
 from osgeo import osr
 from shapely.geometry import Polygon as ShapeL_polygon
